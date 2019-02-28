@@ -133,10 +133,13 @@
                     <!-- the entry-point class that extends org.sonar.api.SonarPlugin -->
                     <pluginClass>io.gitlab.arturbosch.detekt.sonar.DetektPlugin</pluginClass>
                     <pluginDescription>Work in progress kotlin sonar plugin based on detekt.</pluginDescription>
-                    <pluginKey>kotlin</pluginKey>
-                    <pluginName>Kotlin</pluginName>
+                    <!--必须加入白名单才可以运行 plugin，所以使用默认白名单的一个，必改-->
+                    <pluginKey>xoo</pluginKey>
+                    <pluginName>Xoo</pluginName>
                     <pluginSourcesUrl>https://github.com/arturbosch/sonar-kotlin</pluginSourcesUrl>
                     <pluginUrl>https://github.com/arturbosch/sonar-kotlin</pluginUrl>
+                    <sonarLintSupported>true</sonarLintSupported>
+                    <sonarQubeMinVersion>5.6</sonarQubeMinVersion> <!-- allow to depend on API 6.1 but run on LTS -->
                     <!-- advanced properties can be set here. See paragraph "Advanced Build Properties". -->
                 </configuration>
             </plugin>
